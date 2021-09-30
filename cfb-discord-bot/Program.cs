@@ -1,9 +1,13 @@
-using cfb_discord_bot;
+using CFBDiscordBot;
 
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices(services =>
     {
         services.AddHostedService<Worker>();
+        services.Configure<HostOptions>(options =>
+        {
+            options.BackgroundServiceExceptionBehavior = BackgroundServiceExceptionBehavior.Ignore;
+        });
     })
     .Build();
 

@@ -1,15 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk.Worker">
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>dotnet-cfb_discord_bot-086B3D84-42B6-41D6-89A4-549D30254105</UserSecretsId>
-    <RootNamespace>cfb_discord_bot</RootNamespace>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="DSharpPlus" Version="4.2.0-nightly-01013" />
+    <PackageReference Include="DSharpPlus.SlashCommands" Version="4.2.0-nightly-01013" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="6.0.0-rc.1.21451.13" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0-rc.1.21451.13" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
   </ItemGroup>
